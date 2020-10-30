@@ -3,7 +3,6 @@ import java.util.Scanner;
 public class MyDate
 {
 	private int day,month,year;
-	static Scanner s= new Scanner(System.in);
 	MyDate()
 	{
 	   System.out.println("\n*****Default Values*****");
@@ -24,12 +23,6 @@ public class MyDate
 	int getYear(){ return year;}
 	
 	void display(){System.out.println(day+"/"+month+"/"+year);}
-	void accept(){
-		System.out.println("\nEnter the Day, Month & Year");
-		day= s.nextInt();
-		month= s.nextInt();
-		year= s.nextInt();
-	}
 	
 	public static void main(String args[])
 	{
@@ -42,11 +35,6 @@ public class MyDate
 		d.setMonth(10);
 		d.setYear(2020);
 		System.out.println("\n*****Date set by setter*****");
-		System.out.println(d.getDay()+"/"+d.getMonth()+"/"+d.getYear());	
-		
-		d.accept();
-		System.out.println("\n*****Accepted values*****");
-		d.display();
-		
+		System.out.println(d.getDay()+"/"+d.getMonth()+"/"+d.getYear());			
 	}
 }
